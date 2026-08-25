@@ -794,7 +794,651 @@
 
 
 <!-- ================= CTA ================= -->
+<!-- =====================================================
+     BUYER REVIEWS SECTION
+     Paste this before your CTA section
+===================================================== -->
 
+<section class="reviews" id="reviews">
+
+    <div class="container">
+
+        <div class="section-label">
+            CLIENT REVIEWS
+        </div>
+
+        <h2 class="section-title">
+            What my clients say.
+        </h2>
+
+        <p class="reviews-intro">
+            Have you worked with me before?
+            Leave a review and share your experience.
+        </p>
+
+
+        <!-- ================= RATING SUMMARY ================= -->
+
+        <div class="reviews-summary">
+
+            <div class="overall-rating">
+
+                <strong id="averageRating">
+                    5.0
+                </strong>
+
+                <div class="average-stars">
+                    ★★★★★
+                </div>
+
+                <span>
+                    <span id="reviewCount">0</span> client reviews
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= REVIEW FORM ================= -->
+
+        <div class="review-form-wrapper">
+
+            <h3>
+                Leave a Review
+            </h3>
+
+            <form id="reviewForm">
+
+                <!-- NAME -->
+
+                <div class="review-field">
+
+                    <label for="reviewName">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="reviewName"
+                        placeholder="Enter your name"
+                        maxlength="50"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- STAR RATING -->
+
+                <div class="review-field">
+
+                    <label>
+                        Your Rating
+                    </label>
+
+                    <div class="star-rating">
+
+                        <input
+                            type="radio"
+                            id="star5"
+                            name="rating"
+                            value="5"
+                            required
+                        >
+
+                        <label for="star5">
+                            ★
+                        </label>
+
+
+                        <input
+                            type="radio"
+                            id="star4"
+                            name="rating"
+                            value="4"
+                        >
+
+                        <label for="star4">
+                            ★
+                        </label>
+
+
+                        <input
+                            type="radio"
+                            id="star3"
+                            name="rating"
+                            value="3"
+                        >
+
+                        <label for="star3">
+                            ★
+                        </label>
+
+
+                        <input
+                            type="radio"
+                            id="star2"
+                            name="rating"
+                            value="2"
+                        >
+
+                        <label for="star2">
+                            ★
+                        </label>
+
+
+                        <input
+                            type="radio"
+                            id="star1"
+                            name="rating"
+                            value="1"
+                        >
+
+                        <label for="star1">
+                            ★
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- REVIEW -->
+
+                <div class="review-field">
+
+                    <label for="reviewText">
+                        Your Review
+                    </label>
+
+                    <textarea
+                        id="reviewText"
+                        placeholder="Tell me about your experience..."
+                        maxlength="500"
+                        rows="5"
+                        required
+                    ></textarea>
+
+                    <small>
+                        Maximum 500 characters
+                    </small>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="button button-primary review-submit"
+                >
+                    Submit Review
+                </button>
+
+
+                <p
+                    id="reviewMessage"
+                    class="review-message"
+                ></p>
+
+            </form>
+
+        </div>
+
+
+        <!-- ================= REVIEWS ================= -->
+
+        <div
+            class="review-list"
+            id="reviewList"
+        >
+
+            <!-- Reviews will appear here -->
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     REVIEW CSS
+     Add this inside your existing <style> or style.css
+===================================================== -->
+
+<style>
+
+.reviews {
+    padding: 120px 0;
+    background: #ffffff;
+}
+
+.reviews-intro {
+    max-width: 600px;
+    margin-bottom: 50px;
+    color: #666;
+    line-height: 1.7;
+}
+
+
+/* ================= SUMMARY ================= */
+
+.reviews-summary {
+    margin-bottom: 60px;
+}
+
+.overall-rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 28px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+}
+
+.overall-rating strong {
+    font-size: 42px;
+    line-height: 1;
+}
+
+.average-stars {
+    color: #111;
+    font-size: 22px;
+    letter-spacing: 3px;
+}
+
+.overall-rating span {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* ================= FORM ================= */
+
+.review-form-wrapper {
+    max-width: 700px;
+    padding: 35px;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    margin-bottom: 70px;
+}
+
+.review-form-wrapper h3 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 26px;
+}
+
+.review-field {
+    margin-bottom: 24px;
+}
+
+.review-field label {
+    display: block;
+    margin-bottom: 9px;
+    font-weight: 600;
+}
+
+.review-field input,
+.review-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.review-field input:focus,
+.review-field textarea:focus {
+    border-color: #111;
+}
+
+.review-field textarea {
+    resize: vertical;
+}
+
+.review-field small {
+    display: block;
+    margin-top: 7px;
+    color: #888;
+    font-size: 12px;
+}
+
+
+/* ================= STAR SELECTOR ================= */
+
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    width: fit-content;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    cursor: pointer;
+    font-size: 35px;
+    color: #ccc;
+    padding: 0 3px;
+    transition: 0.15s;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input:checked ~ label {
+    color: #111;
+}
+
+
+/* ================= SUBMIT ================= */
+
+.review-submit {
+    border: none;
+    cursor: pointer;
+}
+
+.review-message {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+
+/* ================= REVIEW CARDS ================= */
+
+.review-list {
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.review-card {
+    padding: 28px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.review-card-stars {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.review-card-text {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.review-card-name {
+    font-weight: 700;
+}
+
+.review-card-date {
+    color: #888;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    .reviews {
+        padding: 80px 0;
+    }
+
+    .review-form-wrapper {
+        padding: 25px;
+    }
+
+    .review-list {
+        grid-template-columns: 1fr;
+    }
+
+    .overall-rating {
+        flex-wrap: wrap;
+    }
+
+}
+
+</style>
+
+
+
+<!-- =====================================================
+     REVIEW JAVASCRIPT
+===================================================== -->
+
+<script>
+
+const reviewForm =
+    document.getElementById("reviewForm");
+
+const reviewList =
+    document.getElementById("reviewList");
+
+const reviewMessage =
+    document.getElementById("reviewMessage");
+
+const reviewCount =
+    document.getElementById("reviewCount");
+
+const averageRating =
+    document.getElementById("averageRating");
+
+
+/* =====================================================
+   LOAD SAVED REVIEWS
+===================================================== */
+
+let reviews =
+    JSON.parse(
+        localStorage.getItem("rabbyReviews")
+    ) || [];
+
+
+/* =====================================================
+   DISPLAY REVIEWS
+===================================================== */
+
+function displayReviews() {
+
+    reviewList.innerHTML = "";
+
+    reviewCount.textContent =
+        reviews.length;
+
+
+    if (reviews.length === 0) {
+
+        reviewList.innerHTML = `
+            <p style="color:#777;">
+                No reviews yet. Be the first to leave one!
+            </p>
+        `;
+
+        averageRating.textContent = "0.0";
+
+        return;
+    }
+
+
+    let totalRating = 0;
+
+
+    reviews.forEach(review => {
+
+        totalRating +=
+            Number(review.rating);
+
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "review-card";
+
+
+        card.innerHTML = `
+
+            <div class="review-card-stars">
+                ${"★".repeat(review.rating)}
+                ${"☆".repeat(5 - review.rating)}
+            </div>
+
+            <div class="review-card-text">
+                ${escapeHTML(review.text)}
+            </div>
+
+            <div class="review-card-name">
+                ${escapeHTML(review.name)}
+            </div>
+
+            <div class="review-card-date">
+                ${review.date}
+            </div>
+
+        `;
+
+
+        reviewList.appendChild(card);
+
+    });
+
+
+    const average =
+        totalRating / reviews.length;
+
+
+    averageRating.textContent =
+        average.toFixed(1);
+
+}
+
+
+/* =====================================================
+   SUBMIT REVIEW
+===================================================== */
+
+reviewForm.addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+
+        const name =
+            document
+                .getElementById("reviewName")
+                .value
+                .trim();
+
+
+        const text =
+            document
+                .getElementById("reviewText")
+                .value
+                .trim();
+
+
+        const rating =
+            document
+                .querySelector(
+                    'input[name="rating"]:checked'
+                );
+
+
+        if (!rating) {
+
+            reviewMessage.textContent =
+                "Please select a star rating.";
+
+            return;
+
+        }
+
+
+        const newReview = {
+
+            name: name,
+
+            text: text,
+
+            rating:
+                Number(rating.value),
+
+            date:
+                new Date().toLocaleDateString(
+                    "en-US",
+                    {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric"
+                    }
+                )
+
+        };
+
+
+        reviews.unshift(
+            newReview
+        );
+
+
+        localStorage.setItem(
+            "rabbyReviews",
+            JSON.stringify(reviews)
+        );
+
+
+        reviewForm.reset();
+
+
+        reviewMessage.textContent =
+            "Thank you for your review!";
+
+
+        displayReviews();
+
+    }
+);
+
+
+/* =====================================================
+   SECURITY
+===================================================== */
+
+function escapeHTML(text) {
+
+    const div =
+        document.createElement("div");
+
+    div.textContent =
+        text;
+
+    return div.innerHTML;
+
+}
+
+
+/* INITIALIZE */
+
+displayReviews();
+
+</script>
 <section class="cta"
          id="contact">
 
